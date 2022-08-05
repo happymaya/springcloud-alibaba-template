@@ -1,0 +1,65 @@
+[
+  {
+    "id": "sat-nacos-client",
+    "predicates": [
+      {
+        "args": {
+          "pattern": "/sat/sat-nacos-client/**"
+        },
+        "name": "Path"
+      }
+    ],
+    "uri": "lb://sat-nacos-client",
+    "filters": [
+      {
+        "name": "HeaderToken"
+      },
+      {
+        "name": "StripPrefix",
+        "args": {
+          "parts": "1"
+        }
+      }
+    ]
+  },
+  {
+  "id": "sat-account-service",
+  "predicates": [
+    {
+      "args": {
+        "pattern": "/sat/sat-account-service/**"
+      },
+      "name": "Path"
+    }
+  ],
+  "uri": "lb://sat-account-service",
+  "filters": [
+    {
+      "name": "StripPrefix",
+      "args": {
+        "parts": "1"
+      }
+    }
+  ]
+},
+  {
+    "id": "sat-goods-service",
+    "predicates": [
+      {
+        "args": {
+          "pattern": "/sat/sat-goods-service/**"
+        },
+        "name": "Path"
+      }
+    ],
+    "uri": "lb://sat-goods-service",
+    "filters": [
+      {
+        "name": "StripPrefix",
+        "args": {
+          "parts": "1"
+        }
+      }
+    ]
+  }
+]
