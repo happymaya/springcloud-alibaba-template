@@ -11,32 +11,30 @@ import reactor.core.publisher.Mono;
 
 /**
  * <h1>自定义告警</h1>
- * */
+ *
+ * @author superhsc
+ */
 @Slf4j
 @Component
 @SuppressWarnings("all")
-public class QinyiNotifier extends AbstractEventNotifier {
+public class HappymayaNotifier extends AbstractEventNotifier {
 
-    protected QinyiNotifier(InstanceRepository repository) {
+    protected HappymayaNotifier(InstanceRepository repository) {
         super(repository);
     }
 
     /**
      * <h2>实现对事件的通知</h2>
-     * */
+     */
     @Override
     protected Mono<Void> doNotify(InstanceEvent event, Instance instance) {
 
         return Mono.fromRunnable(() -> {
 
             if (event instanceof InstanceStatusChangedEvent) {
-                log.info("Instance Status Change: [{}], [{}], [{}]",
-                        instance.getRegistration().getName(), event.getInstance(),
-                        ((InstanceStatusChangedEvent) event).getStatusInfo().getStatus());
+                log.info("Instance Status Change: [{}], [{}], [{}]", instance.getRegistration().getName(), event.getInstance(), ((InstanceStatusChangedEvent) event).getStatusInfo().getStatus());
             } else {
-                log.info("Instance Info: [{}], [{}], [{}]",
-                        instance.getRegistration().getName(), event.getInstance(),
-                        event.getType());
+                log.info("Instance Info: [{}], [{}], [{}]", instance.getRegistration().getName(), event.getInstance(), event.getType());
             }
 
         });

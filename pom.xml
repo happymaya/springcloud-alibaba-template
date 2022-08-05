@@ -7,13 +7,20 @@
     <groupId>cn.happymaya.sat</groupId>
     <artifactId>springcloud-alibaba-template</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
         <module>sat-common</module>
         <module>sat-mvc-config</module>
         <module>sat-alibaba-nacos-client</module>
         <module>sat-admin</module>
         <module>sat-authority-center</module>
+        <module>sat-gateway</module>
+        <module>sat-hystrix-dashboard</module>
+        <module>sat-stream-client</module>
+        <module>sat-sentinel-client</module>
+        <module>sat-service</module>
     </modules>
+
     <packaging>pom</packaging>
 
     <parent>

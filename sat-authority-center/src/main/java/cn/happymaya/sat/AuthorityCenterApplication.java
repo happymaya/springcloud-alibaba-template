@@ -7,14 +7,15 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 /**
  * <h1>授权中心启动入口</h1>
- * */
+ *
+ * @author superhsc
+ */
 @EnableJpaAuditing  // 允许 Jpa 自动审计
 @EnableDiscoveryClient
 @SpringBootApplication
 public class AuthorityCenterApplication {
 
     public static void main(String[] args) {
-
         SpringApplication.run(AuthorityCenterApplication.class, args);
     }
 }

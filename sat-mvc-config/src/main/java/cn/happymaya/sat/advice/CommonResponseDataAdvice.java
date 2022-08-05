@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 /**
- * <h1>实现统一响应</h1>
+ * <h1> 实现统一响应 </h1>
+ *
+ * @author superhsc
  */
 @RestControllerAdvice(value = "cn.happymaya.sat")
 public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
@@ -48,7 +50,6 @@ public class CommonResponseDataAdvice implements ResponseBodyAdvice<Object> {
         } else {
             response.setData(o);
         }
-
         return response;
     }
 }

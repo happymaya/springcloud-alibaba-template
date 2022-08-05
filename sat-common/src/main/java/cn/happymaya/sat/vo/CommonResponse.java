@@ -9,25 +9,31 @@ import java.io.Serializable;
 /**
  * <h1>通用响应对象定义</h1>
  * {
- *     "code": 0,
- *     "message": "",
- *     "data": {}
+ * "code": 0,
+ * "message": "",
+ * "data": {}
  * }
  *
  * @author superhsc
- * */
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class CommonResponse<T> implements Serializable {
 
-    /** 错误码 */
+    /**
+     * 错误码
+     */
     private Integer code;
 
-    /** 错误消息 */
+    /**
+     * 错误消息
+     */
     private String message;
 
-    /** 泛型响应数据 */
+    /**
+     * 泛型响应数据
+     */
     private T Data;
 
     public CommonResponse(Integer code, String message) {

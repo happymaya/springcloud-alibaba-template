@@ -1,0 +1,14 @@
+[
+  {
+    "apiName": "nacos-client-api",
+    "predicateItems": [
+      {
+        "pattern": "/sat/sat-nacos-client/nacos-client/project-config"
+      },
+      {
+        "pattern": "/sat/sat-nacos-client/**",
+        "matchStrategy": 1
+      }
+    ]
+  }
+]
