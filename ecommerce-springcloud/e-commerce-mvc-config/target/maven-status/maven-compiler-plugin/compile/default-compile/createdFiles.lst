@@ -1,0 +1,3 @@
+com/imooc/ecommerce/advice/GlobalExceptionAdvice.class
+com/imooc/ecommerce/annotation/IgnoreResponseAdvice.class
+com/imooc/ecommerce/advice/CommonResponseDataAdvice.class
